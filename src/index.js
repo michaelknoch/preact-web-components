@@ -10,7 +10,5 @@ const Greeting = ({ name = "World" }) => {
 };
 
 register(Greeting, "x-greeting", ["name"], { shadow: false });
-register(Greeting, "x-greeting", ["name"], { shadow: false });
-register(Greeting, "x-greeting", ["name"], { shadow: false });
 
 export default null;
