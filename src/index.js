@@ -3,14 +3,10 @@ import { useEffect } from "preact/compat";
 
 const Greeting = ({ name = "World" }) => {
     useEffect(() => {
-        console.log("lel");
+        console.log("lol");
     });
 
     return <p>Hello, {name}!</p>;
 };
 
 register(Greeting, "x-greeting", ["name"], { shadow: false });
-register(Greeting, "x-greeting", ["name"], { shadow: false });
-register(Greeting, "x-greeting", ["name"], { shadow: false });
-
-export default null;
