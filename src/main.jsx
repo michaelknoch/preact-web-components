@@ -1,23 +1,8 @@
 import React, { useEffect, useState } from "react";
-import r2wc from "@r2wc/react-to-web-component";
+import ReactDOM from "react-dom";
 
-const Greeting = ({ name = "World" }) => {
-    useEffect(() => {
-        console.log("lol");
-    });
-
-    const [counter, setCounter] = useState(0);
-
-    return (
-        <>
-            <p>
-                Hello, {name}! {counter}
-            </p>
-            <button onClick={() => setCounter((oldState) => ++oldState)}>button</button>
-        </>
-    );
+const Root = () => {
+    return "hello world";
 };
 
-const WebGreeting = r2wc(Greeting);
-
-customElements.define("web-greeting", WebGreeting);
+ReactDOM.render(<Root />, document.getElementById("root"));
