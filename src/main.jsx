@@ -1,5 +1,5 @@
-import register from "preact-custom-element";
-import { useEffect, useState } from "preact/compat";
+import React, { useEffect, useState } from "react";
+import r2wc from "@r2wc/react-to-web-component";
 
 const Greeting = ({ name = "World" }) => {
     useEffect(() => {
@@ -18,4 +18,6 @@ const Greeting = ({ name = "World" }) => {
     );
 };
 
-register(Greeting, "x-greeting", ["name"], { shadow: true });
+const WebGreeting = r2wc(Greeting);
+
+customElements.define("web-greeting", WebGreeting);
